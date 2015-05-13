@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 Form Elements</title>
+	<style type="text/css">
+/*
+body {
+	margin: 2em 5em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+h1, legend {
+	font-family:Arial, Helvetica, sans-serif;
+}
+label, input, select {
+	display:block;
+}
+input, select {
+	margin-bottom: 1em;
+}
+fieldset {
+	margin-bottom: 2em;
+	padding: 1em;
+}
+fieldset fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+input[type="checkbox"] {
+	display:inline;
+}
+.range {
+	margin-bottom:1em;
+}	
+.card-type input, .card-type label {
+	display:inline-block;
+}
+*/
+	</style>	
+</head>
+<body>
+  <h1>HTML5 Form Collections</h1>
+  <form id="register">
+
+    <fieldset> 
+      <legend>Personal details</legend> 
+      <p> 
+          <label for="first-name">First Name</label>
+          <input id="first-name" name="given-name" type="text" placeholder="First name only" required> 
+      
+      </p>
+      <p> 
+          <label for="last-name">Last Name</label>
+          <input id="family-name" name="family-name" type="text" placeholder="Last name only" required> 
+      
+      </p>
+      <p> 
+        <label for="dob">Date of Birth</label>
+        <input id="dob" name="dob" type="date" required>
+      </p> 
+      <p> 
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="example@domain.com" required>     
+      </p> 
+      <p> 
+          <label for="url">URL</label> 
+          <input id="url" name="url" type="url" placeholder="http://mysite.com">
+      </p>    
+      <p> 
+          <label for="phone">Telephone</label>
+          <input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required>
+      </p> 
+      <p>
+        <label for="shoes">Shoesize</label>
+        <input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
+      </p>
+      <p>
+        <label for="skill">Flying Skill level (1 low - 100 high)</label>
+        <input id="skill" name="skill" type="range" min="1" max="100" value="0">
+        <output name="output" onforminput="value=a.value">0</output>
+      </p>
+    </fieldset>
+    <fieldset> 
+      <legend>Billing address</legend> 
+      <p> 
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows=5 required></textarea>
+      </p> 
+      <p> 
+          <label for="postcode">Post code</label> 
+          <input id="postCode" name="postCode" type="text" required>
+      </p> 
+      <p> 
+          <label>Country 
+          <input id="country" name="country" list="country-names" type="text" required> 
+          <datalist id="country-names"> 
+            <option label="England" value="England"></option> 
+            <option label="Northern Ireland" value="Northern Ireland"></option> 
+            <option label="Ireland" value="Ireland"></option> 
+            <option label="Scotland" value="Scotland"></option> 
+            <option label="Wales" value="Wales"></option> 
+          </datalist>
+      </label> 
+      </p> 
+    </fieldset> 
+    <fieldset> 
+      <legend>Card details</legend> 
+      <fieldset> 
+        <legend>Card type</legend> 
+        <div class="card-type"> 
+            <input id="visa" name="cardtype" type="radio"> 
+            <label for="visa">VISA</label> 
+            <input id="mastercard" name="cardtype" type="radio">
+            <label for="mastercard">Mastercard</label> 
+            <input id="amex" name="cardtype" type="radio"> 
+            <label for="amex">AMEX</label>
+        </p> 
+      </fieldset>
+      <p> 
+          <label id="cardName">Name</label> 
+          <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" required>
+      </p>
+      <p> 
+          <label for="cardNo">Card number</label>
+          <input id="cardNo" name="cardNo" type="number" required title="The sixteen digit number across the middle of your card."> 
+      </p>
+      <p> 
+          <label for="security">Security code</label> 
+          <input id="security" name="security" type="number" required pattern="[0-9]{3}" title="The last three digits on the back of your card.">
+      </p>
+      <p> 
+          <label for="expiry">Expiry Date</label>
+          <input id="expiry" name="expiry" type="month">
+      </p>
+    </fieldset> 
+    <fieldset> 
+      <p> 
+        <button type=submit>Place Order</button> 
+      </p> 
+    </fieldset> 
+  </form> 
+</body>
+</html>
